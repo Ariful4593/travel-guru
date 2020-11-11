@@ -1,0 +1,75 @@
+[debug] [2020-09-18T17:04:35.739Z] ----------------------------------------------------------------------
+[debug] [2020-09-18T17:04:35.748Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\user\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-09-18T17:04:35.749Z] CLI Version:   8.10.0
+[debug] [2020-09-18T17:04:35.749Z] Platform:      win32
+[debug] [2020-09-18T17:04:35.750Z] Node Version:  v12.18.1
+[debug] [2020-09-18T17:04:35.753Z] Time:          Fri Sep 18 2020 23:04:35 GMT+0600 (Bangladesh Standard Time)
+[debug] [2020-09-18T17:04:35.753Z] ----------------------------------------------------------------------
+[debug] [2020-09-18T17:04:35.754Z] 
+[debug] [2020-09-18T17:04:35.810Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-09-18T17:04:35.814Z] > authorizing via signed-in user
+[debug] [2020-09-18T17:04:35.815Z] [iam] checking project travel-guru-web for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-09-18T17:04:35.821Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/travel-guru-web:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-09-18T17:04:37.333Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 18 Sep 2020 17:04:37 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1156","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-18T17:04:37.339Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/travel-guru-web  
+ 
+[debug] [2020-09-18T17:04:37.871Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 18 Sep 2020 17:04:38 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'travel-guru-web'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-09-18T17:04:37.935Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/travel-guru-web/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-09-18T17:04:40.560Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 18 Sep 2020 17:04:40 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] i  hosting[travel-guru-web]: beginning deploy... 
+[info] i  hosting[travel-guru-web]: found 25 files in build 
+[debug] [2020-09-18T17:04:40.825Z] [hosting] hash cache [YnVpbGQ] not populated
+[debug] [2020-09-18T17:04:42.498Z] [hosting] hash cache [YnVpbGQ] stored for 25 files
+[debug] [2020-09-18T17:04:42.498Z] [hosting][hash queue][FINAL] {"max":1632,"min":140,"avg":348.24,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":1672}
+[debug] [2020-09-18T17:04:42.500Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/travel-guru-web/versions/b8b2e91765fae194:populateFiles  
+ <request body omitted>
+[debug] [2020-09-18T17:04:44.227Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 18 Sep 2020 17:04:44 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-18T17:04:44.256Z] [hosting][populate queue][FINAL] {"max":1753,"min":1753,"avg":1753,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1778}
+[debug] [2020-09-18T17:04:44.256Z] [hosting] uploads queued: 25
+[debug] [2020-09-18T17:05:02.279Z] [hosting][upload queue][FINAL] {"max":18049,"min":2117,"avg":3459.72,"active":0,"complete":25,"success":25,"errored":0,"retried":0,"total":25,"elapsed":18051}
+[info] +  hosting[travel-guru-web]: file upload complete 
+[debug] [2020-09-18T17:05:02.313Z] [hosting] deploy completed after 21749ms
+[debug] [2020-09-18T17:05:02.693Z] [
+  {
+    "config": {
+      "public": "build",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "travel-guru-web"
+    },
+    "site": "travel-guru-web",
+    "version": "sites/travel-guru-web/versions/b8b2e91765fae194"
+  }
+]
+[info] i  hosting[travel-guru-web]: finalizing version... 
+[debug] [2020-09-18T17:05:02.696Z] >>> HTTP REQUEST PATCH https://firebasehosting.googleapis.com/v1beta1/sites/travel-guru-web/versions/b8b2e91765fae194?updateMask=status  
+ {"status":"FINALIZED"}
+[debug] [2020-09-18T17:05:04.383Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 18 Sep 2020 17:05:04 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-18T17:05:04.384Z] [hosting] finalized version for travel-guru-web: {"name":"sites/travel-guru-web/versions/b8b2e91765fae194","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2020-09-18T17:04:39.869899Z","createUser":{"email":"arifkhagoria2015@gmail.com"},"finalizeTime":"2020-09-18T17:05:04.409145Z","finalizeUser":{"email":"arifkhagoria2015@gmail.com"}}
+[info] +  hosting[travel-guru-web]: version finalized 
+[info] i  hosting[travel-guru-web]: releasing new version... 
+[debug] [2020-09-18T17:05:04.400Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/travel-guru-web/releases?version_name=sites/travel-guru-web/versions/b8b2e91765fae194  
+ {"message":null}
+[debug] [2020-09-18T17:05:06.096Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Fri, 18 Sep 2020 17:05:06 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-Q050=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-09-18T17:05:06.097Z] [hosting] release: {"name":"sites/travel-guru-web/releases/1600448705507362","version":{"name":"sites/travel-guru-web/versions/b8b2e91765fae194","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2020-09-18T17:04:39.869899Z","createUser":{"email":"arifkhagoria2015@gmail.com"},"finalizeTime":"2020-09-18T17:05:04.409145Z","finalizeUser":{"email":"arifkhagoria2015@gmail.com"},"preview":{}},"type":"DEPLOY","releaseTime":"2020-09-18T17:05:05.507362612Z","releaseUser":{"email":"arifkhagoria2015@gmail.com"}}
+[info] +  hosting[travel-guru-web]: release complete 
+[info] 
+[info] +  Deploy complete! 
+[info] 
+[info] Project Console: https://console.firebase.google.com/project/travel-guru-web/overview
+[info] Hosting URL: https://travel-guru-web.web.app

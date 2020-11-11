@@ -1,0 +1,8 @@
+.navLink a{
+    margin-right: 20px;
+    text-decoration: none;
+    color: #544242;
+}
+.navLink a:hover{
+    color: orange;
+}
