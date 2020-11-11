@@ -1,5 +1,4 @@
 import React from 'react';
-import './Login.css';
 import Button from '@material-ui/core/Button';
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -9,6 +8,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import { Container } from '@material-ui/core';
 import { UserContext } from '../../App';
 import { Col, Row } from 'react-bootstrap';
+import './Login.css'
 const Login = () => {
     const firebaseConfig = {
         apiKey: "AIzaSyBI2epogcUgl96MpeM_K6RnWSwCDJVQVho",
@@ -97,7 +97,6 @@ const Login = () => {
                 setUser(userInfor)
                 setLoggedInUser(userInfor)
                 history.replace(from)
-                console.log(displayName, email)
             })
             .catch(error => {
                 var errorMessage = error.message;
@@ -119,15 +118,12 @@ const Login = () => {
                 setLoggedInUser(userInfor)
                 history.replace(from)
                 console.log(displayName, email)
-            // var user = result.user;
-            // console.log("fb user after sign in", user)
+            
         }).catch(function (error) {
             var errorCode = error.code;
             var errorMessage = error.message;
-            var email = error.email;
             console.log(errorCode, errorMessage)
         });
-        console.log("Clicked me")
     }
 
 
@@ -203,7 +199,7 @@ const Login = () => {
             }
             <div className="container d-flex justify-content-center">
                 <div className="card" id="signUp-form" style={{ width: '500px',marginTop:'150px' }}>
-                    <div className="card-header text-center display-4">
+                    <div className="card-header text-center">
                         Travel Guru
                     </div>
                     <ul className="list-group list-group-flush p-4">
@@ -230,7 +226,7 @@ const Login = () => {
                                         <label htmlFor="remember">Remember Me</label>
                                     </Col>
                                     <Col className="text-right">
-                                        <a href="" onClick={() => resetPassword(user.email)} >Forget Password?</a>
+                                        <p style={{cursor: 'pointer',}} onClick={() => resetPassword(user.email)} >Forget Password?</p>
                                     </Col>
                                 </Row>
 

@@ -30,7 +30,7 @@ const Slider = ({handleMenu, currentCategory}) => {
                         return (
                             <Item key={slider.id} >
                                 <div className="card" style={{ width: '18rem', borderRadius: '20px', background: `${slider.bg}` }} >
-                                    <img className="card-img-top" src={slider.img} alt="Card image cap" />
+                                    <img className="card-img-top" src={slider.img} alt="Card cap" />
                                     <div className="card-body">
                                         <h5 className={`card-title text-primary text-center ${currentCategory === `${slider.hints}` ? 'text-danger' : ''}`} onClick={() => handleMenu(`${slider.hints}`)} style={{cursor: 'pointer'}}>{slider.name}</h5>
                                     </div>

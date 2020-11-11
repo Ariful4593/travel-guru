@@ -1,26 +1,9 @@
 import React, { useState } from 'react';
-import { Link, useHistory, useParams } from 'react-router-dom';
-import Button from '@material-ui/core/Button';
-import { makeStyles } from '@material-ui/core/styles';
-import { Col, Form, Row } from 'react-bootstrap';
-import { Container, FormGroup, Grid, TextField } from '@material-ui/core';
-import DatePicker from 'react-datepicker';
+import {useHistory } from 'react-router-dom';
+import { FormGroup, Grid } from '@material-ui/core';
 import './DestinationForm.css'
-const useStyles = makeStyles((theme) => ({
-    container: {
-        display: 'flex',
-        flexWrap: 'wrap',
-    },
-    textField: {
-        marginLeft: theme.spacing(1),
-        marginRight: theme.spacing(1),
-        width: 200,
-    },
-}));
 
 const DestinationForm = ({ formStatus }) => {
-    const [from, setFrom] = useState(null)
-    const [to, setTo] = useState(null)
     const [formField, setFormField] = useState({
         whereTo: '',
         destination: '',
@@ -29,7 +12,6 @@ const DestinationForm = ({ formStatus }) => {
         status: formStatus,
     })
     console.log(formField)
-    const classes = useStyles();
     const history = useHistory();
     const handleSubmit = (e) => {
         sessionStorage.setItem('userData', JSON.stringify(formField))

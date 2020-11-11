@@ -2,7 +2,6 @@ import React from 'react';
 import { useContext } from 'react';
 import { Container } from 'react-bootstrap';
 import {
-  BrowserRouter as Router,
   Route,
   Redirect,
 } from "react-router-dom";

@@ -2,11 +2,9 @@ import React, { useEffect, useState } from 'react';
 import Hoteldata from '../../../HotelData/Hoteldata'
 import DestinationForm from '../../DestinationForm/DestinationForm';
 import Slider from '../Slider/Slider';
-import HomeData from './HomeData';
 import SelectHotel from './SelectHotel';
 const MainHome = () => {
     const [currentCategory, setCurrentCategory] = useState('');
-    const [currentItem, setCurrentItem] = useState(null);
     const [currentMenu, setCurrentMenu] = useState([]);
     
     useEffect(() =>{
@@ -21,7 +19,6 @@ const MainHome = () => {
     }, [currentCategory]);
     const handleMenu = (submenu) =>{
         setCurrentCategory(submenu);
-        setCurrentItem(null)
     }
 
     const [formStatus, setFormStatus] = useState(null)

@@ -1,13 +1,10 @@
 import React from 'react';
 import './App.css';
-import Header from './component/Header/Header';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
-import Login from './component/Travel/Login';
-import Travel from './component/Travel/Travel';
 import { createContext } from 'react';
 import { useState } from 'react';
 import Home from './component/Home/Home/Home';
@@ -18,6 +15,7 @@ import News from './component/Page/News/News';
 import DestinationForm from './component/DestinationForm/DestinationForm';
 import PrivateRoute from './component/PrivateRoute/PrivateRoute';
 import Hotel from './component/Hotel/Hotel';
+import Login from './component/Login/Login'
 export const UserContext = createContext();
 function App() {
   const [loggedInUser, SetLoggedInUser] = useState({})
@@ -30,7 +28,6 @@ function App() {
           <Switch>
             <Route exact path="/">
               <Home></Home>
-              {/* <Travel></Travel> */}
             </Route>
             <Route path="/destination">
               <Destination></Destination>

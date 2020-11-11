@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import logo from '../../images/Logo.png'
 import { useContext } from 'react';
 import { UserContext } from '../../App';
-import { Dropdown, DropdownButton, Nav, Navbar } from 'react-bootstrap';
+import { Dropdown, DropdownButton, Navbar } from 'react-bootstrap';
 const Header = () => {
     const [loggedInUser, SetLoggedInUser] = useContext(UserContext)
     const navA = {

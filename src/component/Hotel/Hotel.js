@@ -6,23 +6,22 @@ import Map from '../Page/Map/Map';
 const Hotel = () => {
     const getData = JSON.parse(sessionStorage.getItem('userData'))
     const hotelRoom = HotelData.filter(x => x.district === getData.status);
-    console.log(hotelRoom)
     return (
         <div className="container" style={{ backgroundColor: 'white', maxWidth: '100%', margin: 0, padding: 0 }}>
             <Header></Header>
             <div className="row">
-                <div className="col-md-6">
+                <div className="col-12 col-sm-12 col-md-12 col-lg-6">
                     {
                         hotelRoom.map(data => {
                             return (
                                 <div className=" row mb-4" key={data.id}>
-                                    <div className="col-md-6 p-0">
-                                        <div className="card h-100" style={{ width: '18rem' }}>
-                                            <img className="card-img-top h-100" src={data.img} alt="Card image cap" />
+                                    <div className="col-12 col-sm-12 col-md-6 p-0">
+                                        <div className="card h-100">
+                                            <img className="card-img-top h-100" src={data.img} alt="Card cap" />
                                         </div>
                                     </div>
-                                    <div className="col-md-6">
-                                        <div className="card" style={{ width: '18rem' }}>
+                                    <div className="col-12 col-sm-12 col-md-6 p-0">
+                                        <div className="card">
                                             <div className="card-body">
                                                 <h5 className="card-title">{data.title}</h5>
                                                 <p className="card-text m-0">{data.type}</p>
@@ -38,7 +37,7 @@ const Hotel = () => {
                         })
                     }
                 </div>
-                <div className="col-md-6">
+                <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <Map></Map>
                 </div>
             </div>

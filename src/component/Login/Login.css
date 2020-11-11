@@ -16,3 +16,15 @@ input[type=email], input[type=password], input[type=text] {
     width: 100%;
     opacity: 0.9;
   }
+
+  @media screen and (max-width: 450px) {
+    .card-header {
+      font-size: 30px;
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .card-header {
+    font-size: 50px;
+}
+}
